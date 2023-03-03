@@ -37,9 +37,9 @@ Console.WriteLine("Nuoli maksaa " + tilattuNuoli.PalautaHinta() + " kultaa");
 
 public class Nuoli
 {
-    private string _karki;
-    private string _pera;
-    private double _pituus;
+    public string _karki { get; set; }
+    public string _pera { get; set; }
+    public double _pituus { get; set; }
     private double nuolenhinta;
 
     public Nuoli(string karki, string pera, int pituus)
@@ -47,23 +47,23 @@ public class Nuoli
         _karki = karki;
         _pera = pera;
         _pituus = pituus;
-        if (_karki == "puu")
+        if (karki == "puu")
         {
             nuolenhinta += 3;
         }
-        if (_karki == "teräs")
+        if (karki == "teräs")
         {
             nuolenhinta += 5;
         }
-        if (_karki == "timantti")
+        if (karki == "timantti")
         {
             nuolenhinta += 50;
         }
-        if (_pera == "kanansulka")
+        if (pera == "kanansulka")
         {
             nuolenhinta += 1;
         }
-        if (karki == "kotkansulka")
+        if (pera == "kotkansulka")
         {
             nuolenhinta += 5;
         }
